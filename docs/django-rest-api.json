@@ -1,0 +1,570 @@
+{
+    "_type": "export",
+    "__export_format": 4,
+    "__export_date": "2021-08-04T14:38:29.705Z",
+    "__export_source": "insomnia.desktop.app:v2021.4.1",
+    "resources": [
+        {
+            "_id": "req_60ce684eb24a49b09fe0d1b3567f93e3",
+            "parentId": "wrk_2d4d04c873214067bbe8630ade9418eb",
+            "modified": 1627915922376,
+            "created": 1627915346109,
+            "url": "http://localhost:8000/",
+            "name": "Obtém todas as rotas disponíveis",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {},
+            "metaSortKey": -1627915514575,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "wrk_2d4d04c873214067bbe8630ade9418eb",
+            "parentId": null,
+            "modified": 1627915471557,
+            "created": 1611658102957,
+            "name": "Curso DJANGO Alura",
+            "description": "",
+            "scope": "collection",
+            "_type": "workspace"
+        },
+        {
+            "_id": "req_65865b245c284eeb97136a2efe05c67e",
+            "parentId": "fld_066e2cf86d9049358699b09a03b15219",
+            "modified": 1628086972530,
+            "created": 1628086825986,
+            "url": "{{ _.base_url }}/aluno/2/matriculas/",
+            "name": "Obtém todos os cursos relacionados a um estudante",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {
+                "type": "basic",
+                "useISO88591": false,
+                "disabled": false,
+                "username": "{{ _.login }}",
+                "password": "{{ _.password }}"
+            },
+            "metaSortKey": -1627915525572,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_066e2cf86d9049358699b09a03b15219",
+            "parentId": "wrk_2d4d04c873214067bbe8630ade9418eb",
+            "modified": 1627915738709,
+            "created": 1627915514525,
+            "name": "Alunos",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1627915514525,
+            "_type": "request_group"
+        },
+        {
+            "_id": "req_e0cc4dab50ab42538d7f2ae3691b22ed",
+            "parentId": "fld_066e2cf86d9049358699b09a03b15219",
+            "modified": 1628087181761,
+            "created": 1627915525522,
+            "url": "{{ _.base_url }}/alunos",
+            "name": "Obtém todos os alunos",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {
+                "type": "basic",
+                "useISO88591": false,
+                "disabled": false,
+                "username": "{{ _.login }}",
+                "password": "{{ _.password }}"
+            },
+            "metaSortKey": -1627915525522,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_6655d8e5bf1f45f9aaa033cc2856b35b",
+            "parentId": "fld_066e2cf86d9049358699b09a03b15219",
+            "modified": 1628087195958,
+            "created": 1627915580620,
+            "url": "{{ _.base_url }}/alunos/2/",
+            "name": "Obtém aluno por id",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {
+                "type": "basic",
+                "useISO88591": false,
+                "disabled": false,
+                "username": "{{ _.login }}",
+                "password": "{{ _.password }}"
+            },
+            "metaSortKey": -1627915435815.5,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_7b45fdab62ec441d88e43ea5ad8c85e4",
+            "parentId": "fld_066e2cf86d9049358699b09a03b15219",
+            "modified": 1628087311054,
+            "created": 1627915599544,
+            "url": "{{ _.base_url }}/alunos/",
+            "name": "Cria um novo aluno",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n    \"nome\": \"Aluno n\",\n    \"rg\": \"909090909\",\n    \"cpf\": \"39839839832\",\n    \"data_nascimento\": \"2021-07-01\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_522b1ad15f4c4b70a07c049b1fb170ae"
+                }
+            ],
+            "authentication": {
+                "type": "basic",
+                "useISO88591": false,
+                "disabled": false,
+                "username": "{{ _.login }}",
+                "password": "{{ _.password }}"
+            },
+            "metaSortKey": -1627915390962.25,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_d271edf0093347bcbdf4db7d8a8ff6db",
+            "parentId": "fld_066e2cf86d9049358699b09a03b15219",
+            "modified": 1628087216466,
+            "created": 1627915696302,
+            "url": "{{ _.base_url }}/alunos/1/",
+            "name": "Deletar um aluno por id",
+            "description": "",
+            "method": "DELETE",
+            "body": {
+                "mimeType": "application/json",
+                "text": ""
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_522b1ad15f4c4b70a07c049b1fb170ae"
+                }
+            ],
+            "authentication": {
+                "type": "basic",
+                "useISO88591": false,
+                "disabled": false,
+                "username": "{{ _.login }}",
+                "password": "{{ _.password }}"
+            },
+            "metaSortKey": -1627915368535.625,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_d4fa238a43ad4690b0612ef90b5f5153",
+            "parentId": "fld_3da5128d45d8495790d5b3f36e3ef2c5",
+            "modified": 1628087226832,
+            "created": 1628086773210,
+            "url": "{{ _.base_url }}/curso/2/matriculas",
+            "name": "Obtém todos os alunos relacionados ao curso",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {
+                "type": "basic",
+                "useISO88591": false,
+                "disabled": false,
+                "username": "{{ _.login }}",
+                "password": "{{ _.password }}"
+            },
+            "metaSortKey": -1627915525572,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_3da5128d45d8495790d5b3f36e3ef2c5",
+            "parentId": "wrk_2d4d04c873214067bbe8630ade9418eb",
+            "modified": 1627915744939,
+            "created": 1627915725407,
+            "name": "Cursos",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1627321423216,
+            "_type": "request_group"
+        },
+        {
+            "_id": "req_aeef817b96574e129b24327dabd86b90",
+            "parentId": "fld_3da5128d45d8495790d5b3f36e3ef2c5",
+            "modified": 1628087237394,
+            "created": 1627915725415,
+            "url": "{{ _.base_url }}/cursos",
+            "name": "Obtém todos os cursos",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {
+                "type": "basic",
+                "useISO88591": false,
+                "disabled": false,
+                "username": "{{ _.login }}",
+                "password": "{{ _.password }}"
+            },
+            "metaSortKey": -1627915525522,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_9b0b3f74e7964246b35f2288750e4c33",
+            "parentId": "fld_3da5128d45d8495790d5b3f36e3ef2c5",
+            "modified": 1628087247253,
+            "created": 1627915725431,
+            "url": "{{ _.base_url }}/cursos/2/",
+            "name": "Obtém curso por id",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {
+                "type": "basic",
+                "useISO88591": false,
+                "disabled": false,
+                "username": "{{ _.login }}",
+                "password": "{{ _.password }}"
+            },
+            "metaSortKey": -1627915435815.5,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_d7bbe32052e740b3881038b78c28cb4e",
+            "parentId": "fld_3da5128d45d8495790d5b3f36e3ef2c5",
+            "modified": 1628087257600,
+            "created": 1627915725434,
+            "url": "{{ _.base_url }}/cursos/",
+            "name": "Cria um novo curso",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n    \"codigo_curso\": \"teste2\",\n    \"descricao\": \"Um teste de criação\",\n    \"nivel\": \"A\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_522b1ad15f4c4b70a07c049b1fb170ae"
+                }
+            ],
+            "authentication": {
+                "type": "basic",
+                "useISO88591": false,
+                "disabled": false,
+                "username": "{{ _.login }}",
+                "password": "{{ _.password }}"
+            },
+            "metaSortKey": -1627915390962.25,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_1f8605e840024397a42415577f474195",
+            "parentId": "fld_3da5128d45d8495790d5b3f36e3ef2c5",
+            "modified": 1628087270007,
+            "created": 1627915725437,
+            "url": "{{ _.base_url }}/cursos/3/",
+            "name": "Deletar um curso por id",
+            "description": "",
+            "method": "DELETE",
+            "body": {
+                "mimeType": "application/json",
+                "text": ""
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_522b1ad15f4c4b70a07c049b1fb170ae"
+                }
+            ],
+            "authentication": {
+                "type": "basic",
+                "useISO88591": false,
+                "disabled": false,
+                "username": "{{ _.login }}",
+                "password": "{{ _.password }}"
+            },
+            "metaSortKey": -1627915368535.625,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_9be7143d4ba649059fa11179010ad195",
+            "parentId": "fld_622bffe91ebb4623a360aeec1594395f",
+            "modified": 1628087466631,
+            "created": 1628087017275,
+            "url": "{{ _.base_url }}/matriculas/",
+            "name": "Cria uma matrícula ",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t  \"periodo\": \"V\",\n    \"aluno\": 4,\n    \"curso\": 2\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_c417d507385546338c8bde135889bc03"
+                }
+            ],
+            "authentication": {
+                "type": "basic",
+                "useISO88591": false,
+                "disabled": false,
+                "username": "{{ _.login }}",
+                "password": "{{ _.password }}"
+            },
+            "metaSortKey": -1628087017275,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_622bffe91ebb4623a360aeec1594395f",
+            "parentId": "wrk_2d4d04c873214067bbe8630ade9418eb",
+            "modified": 1628086752568,
+            "created": 1628086741834,
+            "name": "Matriculas",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1627321423166,
+            "_type": "request_group"
+        },
+        {
+            "_id": "req_ea289cd2eebe4105a52ce834f026c631",
+            "parentId": "fld_622bffe91ebb4623a360aeec1594395f",
+            "modified": 1628087505427,
+            "created": 1628087491955,
+            "url": "{{ _.base_url }}/matriculas/",
+            "name": "Obtém todas as matrículas",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {
+                "type": "basic",
+                "useISO88591": false,
+                "disabled": false,
+                "username": "{{ _.login }}",
+                "password": "{{ _.password }}"
+            },
+            "metaSortKey": -1628001271423.5,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_3bc82c0218024d95914007762408d02e",
+            "parentId": "fld_622bffe91ebb4623a360aeec1594395f",
+            "modified": 1628087531155,
+            "created": 1628087527556,
+            "url": "{{ _.base_url }}/matriculas/1/",
+            "name": "Obtém matrícula por ID",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {
+                "type": "basic",
+                "useISO88591": false,
+                "disabled": false,
+                "username": "{{ _.login }}",
+                "password": "{{ _.password }}"
+            },
+            "metaSortKey": -1627958398497.75,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_6c76e2b134d64b6a9219535db5ec5aff",
+            "parentId": "fld_622bffe91ebb4623a360aeec1594395f",
+            "modified": 1628087570266,
+            "created": 1628087567529,
+            "url": "{{ _.base_url }}/matriculas/1/",
+            "name": "Deleta matrícula por ID",
+            "description": "",
+            "method": "DELETE",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {
+                "type": "basic",
+                "useISO88591": false,
+                "disabled": false,
+                "username": "{{ _.login }}",
+                "password": "{{ _.password }}"
+            },
+            "metaSortKey": -1627936962034.875,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "env_7b8820739f6f3cc4aa9a91d7e94f76fcf9accbd9",
+            "parentId": "wrk_2d4d04c873214067bbe8630ade9418eb",
+            "modified": 1628086926535,
+            "created": 1611658103008,
+            "name": "Base Environment",
+            "data": {
+                "base_url": "http://localhost:8000",
+                "login": "admin",
+                "password": "123456"
+            },
+            "dataPropertyOrder": {
+                "&": [
+                    "base_url",
+                    "login",
+                    "password"
+                ]
+            },
+            "color": null,
+            "isPrivate": false,
+            "metaSortKey": 1611658103008,
+            "_type": "environment"
+        },
+        {
+            "_id": "jar_7b8820739f6f3cc4aa9a91d7e94f76fcf9accbd9",
+            "parentId": "wrk_2d4d04c873214067bbe8630ade9418eb",
+            "modified": 1611658103010,
+            "created": 1611658103010,
+            "name": "Default Jar",
+            "cookies": [],
+            "_type": "cookie_jar"
+        },
+        {
+            "_id": "spc_022d6381e3344cdd858adf553bdde6ab",
+            "parentId": "wrk_2d4d04c873214067bbe8630ade9418eb",
+            "modified": 1611658102959,
+            "created": 1611658102959,
+            "fileName": "Insomnia",
+            "contents": "",
+            "contentType": "yaml",
+            "_type": "api_spec"
+        }
+    ]
+}
